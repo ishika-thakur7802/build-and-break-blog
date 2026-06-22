@@ -1,0 +1,70 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog");
+
+const recentPosts = posts
+  .sort((a, b) =>
+    new Date(b.data.pubDate).getTime() -
+    new Date(a.data.pubDate).getTime()
+  )
+  .slice(0, 5);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+		    <h1 class="site-title">
+              Build and Break<span class="cursor">_</span>
+            </h1>
+			<p>
+				I love building things but what I love even more is breaking them.
+				You'll find here a random collection of everything I figure out while doing so.
+			</p>
+			<div class="terminal-window">
+              <div class="terminal-header">
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+
+                      <span class="terminal-title">
+                          build_and_break.sh
+                      </span>
+                  </div>
+
+                  <div class="terminal-body">
+                      <p class="prompt">ls recent-logs</p>
+                      <section class="recent-logs">
+                                    <ul>
+                                      {
+                                        recentPosts.map(post => (
+                                          <li>
+                                            <a href={`/blog/${post.slug}`}>
+                                              [{post.data.pubDate.toLocaleDateString()}]
+                                              {" "}
+                                              {post.data.title}
+                                            </a>
+                                          </li>
+                                        ))
+                                      }
+                                    </ul>
+                                  </section>
+
+                  </div>
+
+
+            </div>
+
+		</main>
+		<Footer />
+	</body>
+</html>

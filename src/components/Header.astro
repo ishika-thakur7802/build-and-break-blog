@@ -1,0 +1,109 @@
+---
+import { SITE_TITLE } from '../consts';
+import HeaderLink from './HeaderLink.astro';
+
+
+---
+
+<header>
+	<nav>
+    		<div class="internal-links">
+			<HeaderLink href="/">Home</HeaderLink>
+			<HeaderLink href="/blog">Blog</HeaderLink>
+			<HeaderLink href="/about">About</HeaderLink>
+		</div>
+		<div class="social-links">
+        	<a
+        		href="https://drive.google.com/file/d/1iTautug2O4QHVyoggdnzx8Joqd9nm9cP/view?usp=sharing"
+        		target="_blank"
+        		rel="noopener noreferrer"
+        	>
+        		Resume
+        	</a>
+
+        	<a
+        		href="https://www.linkedin.com/in/ishika-thakur/"
+        		target="_blank"
+        		rel="noopener noreferrer"
+        	>
+        		LinkedIn
+        	</a>
+
+        	<a
+        		href="https://github.com/ishika-thakur7802"
+        		target="_blank"
+        		rel="noopener noreferrer"
+        	>
+        		GitHub
+        	</a>
+        </div>
+	</nav>
+</header>
+
+<style>
+header {
+    background: #050505;
+    border-bottom: 1px solid #ff00ff;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
+    padding: 0 2rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: "JetBrains Mono", monospace;
+}
+
+h2 a {
+    color: #ff00ff;
+    text-decoration: none;
+    text-shadow: 0 0 8px #ff00ff;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.internal-links {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    color: #d0d0d0;
+    text-decoration: none;
+    border-bottom: none;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+nav a.active {
+    color: #ff00ff;
+    border-bottom: 2px solid #ff00ff;
+}
+
+.social-links,
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+}
+
+.social-links a:hover {
+    color: #ff00ff;
+}
+
+@media (max-width: 720px) {
+    .social-links {
+        display: none;
+    }
+}
+</style>
