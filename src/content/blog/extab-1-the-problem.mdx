@@ -1,8 +1,3 @@
-import { Image } from "astro:assets";
-import {popup} from "src/assets/extab-cover.png.png";
-import {readTabs} from "src/assets/readTabs.png";
-import {deleteTab} from "src/assets/deleteTab.png";
-import {idleTab} from "src/assets/idleTab.png";
 ---
 title: "eXtab #1: THE PROBLEM"
 description: "Building my first Chrome Extension to manage browser tab overload."
@@ -16,7 +11,11 @@ tags:
   - build-in-public
 ---
 
- 
+import { Image } from "astro:assets";
+import popup from "src/assets/extab-cover.png";
+import readTabs from "src/assets/readTabs.png";
+import deleteTab from "src/assets/deleteTab.png";
+import idleTab from "src/assets/idleTab.png";
 
 > **How many tabs are currently open in your browser?**
 >
@@ -72,6 +71,12 @@ Closing everything wasn't really an option.
 So I decided to build something that could help me understand my tabs instead of simply deleting them.
 
 ### That's how **eXtab** was born.
+
+<Image
+  src={popup}
+  alt="eXtab popup"
+  width={900}
+/>
 
 ---
 
@@ -130,7 +135,11 @@ I loved that idea.
 # Features Built So Far
 
 **Read All Open Tabs**
-
+<Image
+  src={readTabs}
+  alt="Read Tabs feature"
+  width={900}
+/>
 Displays every currently open browser tab.
 
 - Reads the tab title
@@ -140,7 +149,11 @@ Displays every currently open browser tab.
 ---
 
 **Detect Duplicate Tabs**
-
+<Image
+  src={duplicateTab}
+  alt="Duplicate Tabs feature"
+  width={900}
+/>
 Finds tabs with identical URLs.
 
 Example
@@ -166,6 +179,12 @@ No more hunting through dozens of browser tabs.
 ---
 
 **Detect Idle Tabs**
+
+<Image
+  src={idleTabs}
+  alt="Idle Tabs feature"
+  width={900}
+/>
 
 Lists tabs that haven't been opened for **4+ hours**.
 
