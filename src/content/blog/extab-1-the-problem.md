@@ -11,7 +11,7 @@ tags:
   - build-in-public
 ---
 
-# From 54 Tabs to eXtab: Why I Built a Chrome Extension Instead of Another CRUD App
+ 
 
 > **How many tabs are currently open in your browser?**
 >
@@ -49,7 +49,7 @@ A single investigation usually means opening:
 - ServiceNow
 - Internal dashboards
 - Documentation
-- GitHub
+- GitLab
 - Google searches
 
 Hours later...
@@ -66,7 +66,7 @@ Closing everything wasn't really an option.
 
 So I decided to build something that could help me understand my tabs instead of simply deleting them.
 
-That's how **eXtab** was born.
+### That's how **eXtab** was born.
 
 ---
 
@@ -74,11 +74,11 @@ That's how **eXtab** was born.
 
 Honestly...
 
-### A. I refused to open *one more tab*.
+**A. I refused to open _one more tab_**
 
 Building another web app to manage tabs felt ironic.
 
-### B. Chrome Extensions are seriously underrated.
+**B. Chrome Extensions are seriously underrated**
 
 They're one of the few projects that stay with the user all day.
 
@@ -124,7 +124,7 @@ I loved that idea.
 
 # Features Built So Far
 
-## Read All Open Tabs
+**Read All Open Tabs**
 
 Displays every currently open browser tab.
 
@@ -134,7 +134,7 @@ Displays every currently open browser tab.
 
 ---
 
-## Detect Duplicate Tabs
+**Detect Duplicate Tabs**
 
 Finds tabs with identical URLs.
 
@@ -152,7 +152,7 @@ YouTube
 
 ---
 
-## Remove Duplicate Tabs
+**Remove Duplicate Tabs**
 
 Automatically closes duplicate tabs while keeping one copy open.
 
@@ -160,7 +160,7 @@ No more hunting through dozens of browser tabs.
 
 ---
 
-## Detect Idle Tabs
+**Detect Idle Tabs**
 
 Lists tabs that haven't been opened for **4+ hours**.
 
@@ -173,7 +173,7 @@ Each card shows:
 
 ---
 
-## Review Tabs One by One
+**Review Tabs One by One**
 
 Instead of overwhelming you with a huge list, eXtab lets you review idle tabs one at a time.
 
