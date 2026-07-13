@@ -1,7 +1,8 @@
 ---
 title: "eXtab #1: THE PROBLEM"
 description: "Building my first Chrome Extension to manage browser tab overload."
-date: 2026-07-13
+pubDate: 2026-07-13
+
 tags:
   - javascript
   - chrome-extension
