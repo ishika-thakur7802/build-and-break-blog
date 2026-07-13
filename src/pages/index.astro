@@ -48,7 +48,7 @@ const recentPosts = posts
                                       {
                                         recentPosts.map(post => (
                                           <li>
-                                            <a href={`/blog/${post.slug}`}>
+                                            <a href={`/blog/${post.id}/`}>
                                               [{post.data.pubDate.toLocaleDateString()}]
                                               {" "}
                                               {post.data.title}
